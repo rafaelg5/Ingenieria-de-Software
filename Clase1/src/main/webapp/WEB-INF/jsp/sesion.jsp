@@ -12,6 +12,7 @@
         <title>Sesión</title>
     </head>
     <body>
-        <h1>${sesion}!</h1>
+        <h1>${sesion1}!</h1>
+        <h1>${sesion2}!</h1>
     </body>
 </html>

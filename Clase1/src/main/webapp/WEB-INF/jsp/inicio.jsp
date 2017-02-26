@@ -10,12 +10,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Inicio</title>
     </head>
-    <body>        
-        <form method="GET" action="/Clase1/sesion1">
-            <h2>Ingresa nombre</h2>
-            <input id="nombre2" name="nombre1" type="text" placeholder="Nombre">
-            <button>Aceptar</button>
+    <body>  
+    <center>
+        <form method="POST" action="/Clase1/sesion">
+            <h2>Inicia sesión</h2>
+            <p><input id="correo" name="correo" type="text" placeholder="Correo"></p>
+            <p><input id="password" name="password" type="password" placeholder="Contraseña"></p>
+            <p><button>Aceptar</button></p>
         </form>
+        <form method="POST" action="/Clase1/registro">
+            <input type="submit" value="Regístrate">
+        </form>
+    </center>
         <br>
     </body>
 </html>

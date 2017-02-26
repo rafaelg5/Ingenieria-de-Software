@@ -12,31 +12,41 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- *
- * @author jonathan
- */
-@Controller 
+@Controller
 public class Controlador {
-    
-    @RequestMapping(value="/")
-    public String inicio(){
+
+    @RequestMapping(value = "/")
+    public String inicio() {
         return "inicio";
     }
-    
-    @RequestMapping(value="/persona1", method = RequestMethod.GET)
-    public ModelAndView persona1(ModelMap model,HttpServletRequest request){
-        String p = request.getParameter("nombre1");
-        model.addAttribute("persona", p);
-        return new ModelAndView("persona",model);
-    
+
+    @RequestMapping(value = "/sesion", method = RequestMethod.POST)
+    public ModelAndView correo(ModelMap model, HttpServletRequest request) {
+        String c = request.getParameter("correo");
+        String p = request.getParameter("password");
+        model.addAttribute("sesion1", c);
+        model.addAttribute("sesion2", p);
+        return new ModelAndView("sesion", model);
+    }
+
+    @RequestMapping(value = "/registro", method = RequestMethod.POST)
+    public ModelAndView registro(ModelMap model, HttpServletRequest request) {
+        return new ModelAndView("registro", model);
     }
     
-    @RequestMapping(value="/persona2", method = RequestMethod.POST)
-    public ModelAndView persona2(ModelMap model,HttpServletRequest request){
-        String p = request.getParameter("nombre2");
-        model.addAttribute("persona", p);
-        return new ModelAndView("persona",model);
-    
+    @RequestMapping(value = "/registro2", method = RequestMethod.GET)
+    public ModelAndView registro2(ModelMap model, HttpServletRequest request) {
+        String n = request.getParameter("nombre");
+        String c = request.getParameter("carrera");
+        String fn = request.getParameter("fechanac");
+        String m = request.getParameter("correo");
+        String p = request.getParameter("password");
+        model.addAttribute("nombre", n);
+        model.addAttribute("carrera", c);
+        model.addAttribute("fechanac", fn);
+        model.addAttribute("correo", m);
+        model.addAttribute("password", p);
+        return new ModelAndView("registro2", model);
     }
+    
 }
