@@ -21,6 +21,10 @@
         <form method="POST" action="/WebPage/registro">
             <input type="submit" value="Regístrate">
         </form>
+        <br>
+        <form method="POST" action="/WebPage/maps">
+            <input type="submit" value="Ver Mapa">
+        </form>
     </center>
         <br>
     </body>

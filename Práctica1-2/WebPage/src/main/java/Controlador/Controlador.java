@@ -53,6 +53,11 @@ public class Controlador {
     public ModelAndView registro(ModelMap model, HttpServletRequest request) {
         return new ModelAndView("registro", model);
     }
+    
+    @RequestMapping(value = "/maps", method = RequestMethod.POST)
+    public ModelAndView maps(ModelMap model, HttpServletRequest request) {
+        return new ModelAndView("maps", model);
+    }
 
     @RequestMapping(value = "/registro2", method = RequestMethod.GET)
     public ModelAndView registro2(ModelMap model, HttpServletRequest request) {
